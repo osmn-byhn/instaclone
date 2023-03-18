@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon server.js --ignore '../client/'"
+    "server": "nodemon server.js --ignore '../client/'",
+    "client": "npm run dev --prefix ../client",
+    "dev": "concurrently  \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
